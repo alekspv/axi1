@@ -1,1 +1,1 @@
-powershell -NoLogo -noprofile -ExecutionPolicy "unrestricted"   -File .\Deploy.ps1 -Dockerfile src\Dockerfile_with_build
+powershell -NoLogo -noprofile -ExecutionPolicy "unrestricted"   -File .\Deploy.ps1 -Dockerfile Dockerfile_with_build

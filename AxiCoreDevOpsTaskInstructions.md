@@ -49,8 +49,9 @@ From  ```AxiCoreDevOpsTask\Super-service``` as root
 | `rundeploy.cmd`|Entry  point powershell script runner|
 |`rundeployCi.cmd`| Entry point Powershell runner for Ci
 
+
 as per [Networking features in Docker Desktop for Windows Known limitations, use cases, and workarounds](https://docs.docker.com/docker-for-windows/networking/#known-limitations-use-cases-and-workarounds)
-use following commands to see container ip
+On Docker desktop use following commands to see container ip
 >`docker ps`
 
 >` docker exec core-counter ipconfig`
