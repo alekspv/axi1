@@ -20,3 +20,37 @@ Your solution should be triggered by a powershell script called `Deploy.ps1`.
 ## Submitting
 
 Please send back a zip file with your solution and state the time taken.
+
+
+# Worklog
+## Setup
+
+- install  docker Desktop(hyper-v on  windows)
+- switch to  windows containers
+- login to dockerhub
+- Add to  Dockerfile 
+    >```FROM mcr.microsoft.com/dotnet/core/aspnet:3.1```
+    
+    >```FROM mcr.microsoft.com/dotnet/core/sdk:3.1```
+- Preload image 
+    >```docker build -t counter-image -f Dockerfile .```
+- check  git keys and git setup  and clone from  [https://github.com/alekspv/axi1](https://github.com/alekspv/axi1)  it is private repo
+## Build
+
+> **Note 1:** *covers most tasks: [Tutorial: Containerize a .NET Core app](https://docs.microsoft.com/en-us/dotnet/core/docker/build-container?tabs=windows)*
+
+### Files describtion
+From  ```AxiCoreDevOpsTask\Super-service``` as root
+| File  |Describtion|
+| --- | --- |
+| `src/Dockerfile` | Example of simple build |
+|`src/Dockerfile_with_build` | Multistage build for CI with  container support|
+| `Deploy.ps1` |Simple build Script|
+| `rundeploy.cmd`|Entry  point powershell script runner|
+|`rundeployCi.cmd`| Entry point Powershell runner for Ci
+
+as per [Networking features in Docker Desktop for Windows Known limitations, use cases, and workarounds](https://docs.docker.com/docker-for-windows/networking/#known-limitations-use-cases-and-workarounds)
+use following commands to see container ip
+>`docker ps`
+
+>` docker exec core-counter ipconfig`
