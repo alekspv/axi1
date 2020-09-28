@@ -43,10 +43,10 @@ Please send back a zip file with your solution and state the time taken.
 From  ```AxiCoreDevOpsTask\Super-service``` as root
 | File  |Describtion|
 | --- | --- |
-| `src/Dockerfile` | Example of simple build |
-|`src/Dockerfile_with_build` | Multistage build for CI with  container support|
-| `Deploy.ps1` |Simple build Script|
-| `rundeploy.cmd`|Entry  point powershell script runner|
-|`rundeployCi.cmd`| Entry point Powershell runner for Ci
+| `Dockerfile` | Example of simple build |
+| `Dockerfile_with_build` | Multistage build in container for CI with  container support|
+| `Deploy.ps1` |build Script|
+| `rundeploy.cmd`|Entry point powershell script runner to  overcome scriot run policy|
+| `rundeployCi.cmd`| Entry point Powershell runner for Ci to  overcome scriot run policy|
 
 Tested with  Docker Desktop
